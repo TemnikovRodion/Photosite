@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+
 /*Компоненты сайта*/
 import Index from "../../sections/site/Index";
 import About from "../../sections/site/About";
