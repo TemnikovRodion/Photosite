@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Photosite/static/css/main.4d3bbe1a.chunk.css",
+    "main.js": "/Photosite/static/js/main.1de67ca1.chunk.js",
+    "main.js.map": "/Photosite/static/js/main.1de67ca1.chunk.js.map",
+    "runtime-main.js": "/Photosite/static/js/runtime-main.b95067c9.js",
+    "runtime-main.js.map": "/Photosite/static/js/runtime-main.b95067c9.js.map",
+    "static/css/2.8c15c49b.chunk.css": "/Photosite/static/css/2.8c15c49b.chunk.css",
+    "static/js/2.e138772e.chunk.js": "/Photosite/static/js/2.e138772e.chunk.js",
+    "static/js/2.e138772e.chunk.js.map": "/Photosite/static/js/2.e138772e.chunk.js.map",
+    "index.html": "/Photosite/index.html",
+    "precache-manifest.f3de234976aa4895c08e48abaa7e7041.js": "/Photosite/precache-manifest.f3de234976aa4895c08e48abaa7e7041.js",
+    "service-worker.js": "/Photosite/service-worker.js",
+    "static/css/2.8c15c49b.chunk.css.map": "/Photosite/static/css/2.8c15c49b.chunk.css.map",
+    "static/css/main.4d3bbe1a.chunk.css.map": "/Photosite/static/css/main.4d3bbe1a.chunk.css.map",
+    "static/js/2.e138772e.chunk.js.LICENSE.txt": "/Photosite/static/js/2.e138772e.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/Photosite/static/media/parisienne-latin-ext-400-normal.6f4c5e64.woff2",
+    "static/media/icons.svg": "/Photosite/static/media/icons.6005cd24.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b95067c9.js",
+    "static/css/2.8c15c49b.chunk.css",
+    "static/js/2.e138772e.chunk.js",
+    "static/css/main.4d3bbe1a.chunk.css",
+    "static/js/main.1de67ca1.chunk.js"
+  ]
+}
