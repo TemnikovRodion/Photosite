@@ -1,0 +1,22 @@
+@import '../../../assets/resourses/scss/variables.scss';
+
+
+#vk_community_messages {
+    position: relative !important;
+    margin: 0 !important;
+    right: 0 !important;
+    z-index: 1;
+}
+
+
+/* Адаптация к ширине экрана планшета */
+@media(max-width:$mobile_width) {
+    #vk_community_messages {
+        width: 345px !important;
+
+
+      #vkwidget1 {
+          width: 345px !important;
+      }
+    }
+  }

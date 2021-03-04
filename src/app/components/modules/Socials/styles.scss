@@ -1,0 +1,26 @@
+@import '../../../assets/resourses/scss/variables.scss';
+
+.socials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+
+  a {
+    padding: 0 0.3vw;
+    text-decoration: none;
+    color: #000;
+
+    img {
+      height: 25px;
+      width: auto;
+    }
+  }
+}
+
+/* Адаптация к ширине экрана планшета */
+@media(max-width: $tablet_width) {
+  .socials {
+    display: none;
+  }
+}

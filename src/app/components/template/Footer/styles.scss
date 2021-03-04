@@ -1,0 +1,11 @@
+@import "../../../assets/resourses/scss/variables.scss";
+
+footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $dark_grey_color;
+  color: $white_color;
+  font-weight: bold;
+}

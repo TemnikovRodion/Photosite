@@ -1,0 +1,17 @@
+@import "../../../assets/resourses/scss/variables.scss";
+
+.icon {
+    cursor: pointer;
+    
+    &.icon-button-up {
+        fill: $white_color;
+    }
+
+    &.icon-callback {
+        fill: $white_color;
+    }
+
+    &.icon-check {
+        fill: $aqua_color;
+    }
+}

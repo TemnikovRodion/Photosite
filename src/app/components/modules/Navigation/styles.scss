@@ -1,0 +1,146 @@
+@import '../../../assets/resourses/scss/variables.scss';
+
+.nav {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    z-index: 1000000;
+    align-items: center;
+
+    li {
+      display: flex;
+      padding: 0 0.8vw;
+      text-transform: uppercase;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        text-decoration: none;
+        color: #000;
+
+        &:focus,
+        &:active,
+        &:visited {
+          color: #000;
+          text-decoration: none;
+        }
+
+        &:hover {
+          color: $aqua-color;
+          transition: color 0.3s ease-in-out;
+        }
+      }
+
+      &.nav-socials {
+        display: none;
+
+        .nav-socials-link {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-right: 10px;
+          margin-left: 10px;
+          margin-bottom: 5px;
+
+          &.instagram {
+            background: $light_pink_color;
+          }
+
+          &.vkontakte {
+            background: $light_blue_color;
+          }
+
+          &.telegram {
+            background: $light_cyan_color;
+          }
+
+          &.viber {
+            background: $light_purple_color;
+          }
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-wrapper {
+    height: 1px;
+    width: 90%;
+    margin: 5px auto;
+    background: $light_grey_color;
+  }
+}
+
+/*СТИЛИ ДЛЯ ШИРИНЫ ЭКРАНА ПЛАНШЕТА */
+@media(max-width: $tablet_width) {
+  .nav {
+    position: relative;
+
+    .nav-toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .nav-modal {
+      &.open {
+        visibility: visible;
+        opacity: 0.5;
+      }
+    }
+
+    .nav-list {
+      visibility: hidden;
+      display: block;
+      position: absolute;
+      width: 100vw;
+      max-height: 0;
+      overflow: hidden;
+      top: 100%;
+      right: 0;
+      background-color: #fff;
+      border-bottom: 1px solid $aqua-color;
+      transition: max-height .6s linear, visibility .6s linear;
+
+      &.open {
+        visibility: visible;
+        max-height: 100vh;
+      }
+
+      li {
+        display: block;
+
+        &.nav-socials {
+          display: block;
+        }
+
+        a {
+          display: block;
+          padding: 10px 15px 10px 15px;
+          font-size: 1.2em;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../../../assets/resourses/scss/variables.scss';
+
+.images {
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 95vw;
+    min-height: calc(94vh - 110px);
+    max-height: calc(94vh - 110px);
+    margin: 0 auto;
+    row-gap: 10px;
+    column-gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    img, picture {
+        height: calc(94vh - 110px);
+    }
+}
+
+/* АДАПТАЦИЯ К ШИРИНЕ ЭКРАНА ПЛАНШЕТА */
+@media(max-width:$tablet_width) {
+    .images {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: unset;
+        max-height: unset;
+
+        img, picture {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+        }
+    }
+}

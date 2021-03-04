@@ -1,0 +1,27 @@
+@import '../../../../assets/resourses/scss/variables.scss';
+
+.fixedButtons {
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 10px;
+    right: 10px;
+    bottom: 120px;
+}
+
+/* АДАПТАЦИЯ К ШИРИНЕ ЭКРАНА ПЛАНШЕТА */
+@media(max-width: $tablet_width) {
+    .fixedButtons {
+        bottom: 90px;
+    }
+}
+
+/* АДАПТАЦИЯ К ШИРИНЕ ЭКРАНА ТЕЛЕФОНА */
+@media(max-width: $mobile_width) {
+    .fixedButtons {
+        bottom: 70px;
+    }
+}

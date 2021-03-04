@@ -1,0 +1,24 @@
+@import '../../../assets/resourses/scss/variables.scss';
+
+.image-gallery-image {
+  min-height: 350px;
+  max-height: calc(94vh - 110px) !important;
+}
+
+.image-gallery-icon { 
+  color: $aqua-color !important;
+}
+
+/* АДАПТАЦИЯ К ШИРИНЕ ЭКРАНА МЕНЕЕ 1280 PX */
+@media(max-width: $tablet_width) {
+  .image-gallery-image {
+    max-height: calc(94vh - 100px) !important;
+  }
+}
+
+/* АДАПТАЦИЯ К ШИРИНЕ ЭКРАНА МЕНЕЕ 480 PX */
+@media(max-width: $mobile_width) {
+  .image-gallery-image {
+    max-height: calc(94vh - 110px) !important;
+  }
+}

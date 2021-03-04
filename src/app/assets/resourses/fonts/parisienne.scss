@@ -1,0 +1,8 @@
+// Шрифты
+@import "@fontsource/parisienne/scss/mixins";
+
+@include fontFace(
+  $weight: 400,
+  $display: fallback,
+  $fontDir: "~@fontsource/parisienne/files"
+);

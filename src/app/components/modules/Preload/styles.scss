@@ -1,0 +1,159 @@
+@import "../../../assets/resourses/scss/variables.scss";
+@import "../../../assets/resourses/fonts/parisienne.scss";
+
+// Переменные
+$animation-duration: 3.5s;
+$logo-width: 250px;
+$circle-size: 40px;
+$max-animation-left: calc(50vw - #{$logo-width} / 2 - #{$circle-size});
+$max-animation-right: calc(50vw + #{$logo-width} / 2);
+
+#preloader{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: $dark_grey_color;
+    width: 0;
+    visibility: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: $animation-duration linear preloader;
+    z-index: 1001;
+
+    .preloader-logo {
+        overflow: hidden;
+        max-width: $logo-width;
+        box-sizing: border-box;
+        width: $logo-width;
+
+        .preloader-logo-text {
+            color: $white_color;
+            width: $logo-width;
+            font-family: "Parisienne";
+            font-size: 28px;
+            text-align: center;
+            margin-left: calc(#{$logo-width} * -1);
+            animation: $animation-duration linear fade;
+        }
+    }
+
+    .preloader-circle {
+        position: absolute;
+        left: $max-animation-right;
+        width: $circle-size;
+        height: $circle-size;
+        background: linear-gradient(135deg, $light_aqua_color 20%, $aqua_color 70%);
+        border-radius: calc(#{$circle-size} / 2);
+        animation: $animation-duration linear bounce;
+    }
+}
+
+@keyframes preloader {
+    0% {
+        visibility: visible;
+        width: 100%;
+    }
+
+    87% {
+        visibility: visible;
+        width: 100%; 
+    }
+
+    100% {
+        visibility: hidden;
+        width: 0;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        left: $max-animation-left;
+    }
+
+    15% {
+        left: $max-animation-right;
+        width: $circle-size;
+    }
+
+    20% {
+        width: calc(#{$circle-size} * 2);
+    }
+
+    25% {
+        width: $circle-size;
+    }
+
+    30% {
+        left: $max-animation-left;
+        width: $circle-size;
+        opacity: 1;
+    }
+
+    35% {
+        width: calc(#{$circle-size} * 2);
+    }
+
+    40% {
+        width: $circle-size;
+    }
+
+    45% {
+        left: $max-animation-right;
+        opacity: 0;
+    }
+
+    55% {
+        opacity: 0;
+    }
+
+    70% {
+        left: $max-animation-right;
+        opacity: 1;
+    }
+
+    85% {
+        left: $max-animation-left;
+        width: $circle-size;
+    }
+
+    90% {
+        width: calc(#{$circle-size} * 2);
+    }
+
+    95% {
+        width: $circle-size;
+    }
+
+    100% {
+        left: $max-animation-right;
+    }
+}
+
+@keyframes fade {
+    0% {
+        margin-left: calc(#{$logo-width} * -1);
+    }
+
+    32% {
+        margin-left: calc(#{$logo-width} * -1);
+    }
+
+    45% {
+        margin-left: 0px;
+    }
+
+    70% {
+        margin-left: 0px;
+    }
+
+    83% {
+        margin-left:  calc(#{$logo-width} * -1);
+    }
+
+    100% {
+        margin-left:  calc(#{$logo-width} * -1);
+    }
+}

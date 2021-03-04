@@ -1,0 +1,52 @@
+@import "../../../assets/resourses/scss/variables.scss";
+
+.contacts {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 10px;
+    padding: 0 10px;
+    justify-content: space-around;
+    font-weight: 300;
+
+    .numbers {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .signature {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        .logotype {
+            display: flex;
+            font-family: parisienne;
+            font-size: 200%;
+            color: $aqua_color;
+            line-height: normal;
+        }
+    
+        .copyright {
+            display: flex;
+            line-height: normal;
+            justify-content: center;
+        }
+        
+    }
+}
+
+@media (max-width: $mobile_width) {
+    .copyright {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: $tablet_width) {
+    .copyright {
+        font-size: 70%;
+    }
+}

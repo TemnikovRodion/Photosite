@@ -1,0 +1,28 @@
+@import '../../../assets/resourses/scss/variables.scss';
+
+.toast {
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    padding: 10px;
+    top: 60px;
+    right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    z-index: 1000;
+
+    &.success {
+        background: $light_green_color;
+        color: $white_color;
+    }
+
+    &.error {
+        background: $light_amber_color;
+        color: $black_color;
+    }
+}

@@ -1,0 +1,12 @@
+@import '../../../../assets/resourses/scss/variables.scss';
+@import '../../../../assets/resourses/fonts/montserrat.scss';
+
+// Стили Логин формы
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 5px;
+}
+

@@ -1,0 +1,70 @@
+@import '../../../../assets/resourses/scss/variables.scss';
+
+.photosessions {
+    flex-direction: column;
+
+    .catalog {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 2%;
+      row-gap: 3vh;
+      justify-content: center;
+
+      .item {
+        width: 32%;
+        height: auto;
+        background: $white_color;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        cursor: pointer;
+
+        &:hover {
+          transition: all 0.5s;
+          box-shadow: 0 0 10px rgba(0,0,0,0.8);
+        }
+
+        a {
+          display: flex;
+
+          img, picture {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        p {
+          text-align: center;
+          margin: 1vh 1vw;
+        }
+
+
+      }
+    }
+  }
+
+/*СТИЛИ ДЛЯ ШИРИНЫ ЭКРАНА ПЛАНШЕТА */
+@media(max-width: $tablet_width) {
+  /*Изменение кол-ва столбцов в портфолио*/
+  .photosessions {
+    .catalog {
+      .item {
+        width: 49%;
+
+        a:hover {
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+/*СТИЛИ ДЛЯ ШИРИНЫ ЭКРАНА МЕНЕЕ ТЕЛЕФОНА*/
+@media(max-width: $mobile_width) {
+  /*Изменение кол-ва столбцов в портфолио*/
+  .photosessions {
+    .catalog {
+      .item {
+        width: 100%;
+      }
+    }
+  }
+}

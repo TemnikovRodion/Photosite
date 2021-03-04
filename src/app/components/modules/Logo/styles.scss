@@ -1,0 +1,29 @@
+@import "../../../assets/resourses/scss/variables.scss";
+@import "../../../assets/resourses/fonts/parisienne.scss";
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: center;
+    font-family: "Parisienne";
+
+    a {
+      text-decoration: none;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      color: #000;
+      font-size: 200%;
+      text-align: center;
+      white-space: nowrap;
+    }
+}
+
+/* Адаптация к ширине экрана планшета */
+@media(max-width:$tablet_width) {
+  .logo {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

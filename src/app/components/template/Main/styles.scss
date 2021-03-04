@@ -1,0 +1,20 @@
+@import "../../../assets/resourses/scss/variables.scss";
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+
+  section {
+    padding: 2vh 1vw 2vh;
+  }
+}
+
+/* АДАПТАЦИЯ К ШИРИНЕ ЭКРАНА ТЕЛЕФОНА */
+@media(max-width: $mobile_width) {
+  main {
+    section {
+      padding: 2vh 2vw 2vh;
+    }
+  }
+}

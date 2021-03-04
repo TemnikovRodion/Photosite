@@ -1,0 +1,30 @@
+@import '../../../../../../assets/resourses/scss/variables.scss';
+
+.asideNav {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: $dark_grey_color;
+    font-weight: bold;
+
+    .asideFixedNav {
+        position: sticky;
+        top: 40px;
+        height: fit-content;
+
+        .asideNavLink {
+            display: flex;
+            text-decoration: none;
+            margin: 5px;
+            padding: 5px;
+            color: #fff;
+            white-space: nowrap;
+            border-bottom: 1px solid $white_color;
+    
+            &:hover{
+                color: $aqua_color;
+                border-color: $aqua_color;
+            }
+        }
+    }
+}

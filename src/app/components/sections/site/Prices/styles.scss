@@ -1,0 +1,121 @@
+@import '../../../../assets/resourses/scss/variables.scss';
+
+.prices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  row-gap: 10px;
+  column-gap: 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.price {
+  display: flex;
+  position: relative;
+
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .description {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    color: $white_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+    .description-border {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $white_color;
+      border-radius: 5px;
+    }
+
+    h2 {
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.services {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+  row-gap: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+  .service {
+    width: 100%;
+    background: $white_color;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+
+      h3 {
+        margin: 5px auto 10px;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          display: flex;
+          align-items: center;
+          margin: 5px 0;
+          
+          svg {
+            margin-right: 10px;
+          }
+
+          p {
+            text-align: justify;
+            width: 80%;
+          }
+        }
+      }
+  }
+}
+
+/* АДАПТАЦИЯ К ШИРИНЕ ЭКРАНА ПЛАНШЕТА */
+@media(max-width: $tablet_width) {
+  .prices,
+  .services {
+    width: 90%;
+  }
+
+  .prices {
+    .price {
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+}
+
+/* АДАПТАЦИЯ К ШИРИНЕ ЭКРАНА ТЕЛЕФОНА */
+@media(max-width: $mobile_width) {
+  .prices,
+  .services {
+    width: 100%;
+  }
+}
+
